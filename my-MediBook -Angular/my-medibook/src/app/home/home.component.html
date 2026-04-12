@@ -1,0 +1,118 @@
+<!-- ================= HERO ================= -->
+
+<section class="hero text-white text-center position-relative">
+    <div class="overlay">
+
+  <img src="assets/bg-hero.png" class="hero-img">
+
+ <div class="container position-absolute start-50 translate-middle-x" style="top:35%;">
+
+    <h1 class="fw-bold display-4">Your Health, Our Priority</h1>
+
+    <a routerLink="/doctors" class="btn btn-primary mt-3">
+      Book Appointment
+    </a>
+
+  </div></div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+<div class="darkmode">
+<section class="container my-5 text-center">
+
+  <h2 class="section-title mb-5">Our Services</h2>
+
+  <div class="row g-4">
+
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let s of services">
+
+      <div class="service-card p-4 shadow-sm h-100">
+
+        <div class="service-icon mb-3">
+          {{ s.icon }}
+        </div>
+
+        <h4 class="mb-2">{{ s.name }}</h4>
+
+        <p class="mb-0">{{ s.description }}</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FEATURED DOCTORS ================= -->
+<section class="container my-5 text-center">
+
+  <h2 class="section-title mb-5">Our Doctors</h2>
+
+  <div class="row g-4">
+
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let doc of doctors">
+
+      <div class="card doctor-card p-4 shadow-sm h-100">
+
+        <h5 class="mb-1">{{ doc.name }}</h5>
+
+        <p class="text-muted mb-2">{{ doc.specialty }}</p>
+
+        <p class="mb-1">⭐ {{ doc.rating }}</p>
+
+        <p class="mb-0">{{ doc.experience }} years experience</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="container my-5 text-center">
+
+  <h2 class="section-title mb-5">Clinic Stats</h2>
+
+  <div class="row g-4">
+
+    <div class="col-12 col-md-4">
+
+      <div class="stat-box p-4 shadow-sm">
+<i class="fa-solid fa-user-doctor fa-2x mb-2" ></i>
+        <h3>{{ doctorsCount }}</h3>
+        <p>Doctors</p>
+
+      </div>
+
+    </div>
+
+    <div class="col-12 col-md-4">
+
+      <div class="stat-box p-4 shadow-sm">
+        <i class="fa-solid fa-hospital fa-2x mb-2" ></i>
+        <h3>{{ patientsCount }}</h3>
+        <p>Patients Served</p>
+
+      </div>
+
+    </div>
+
+    <div class="col-12 col-md-4">
+
+      <div class="stat-box p-4 shadow-sm">
+ <i class="fa-solid fa-stethoscope fa-2x mb-2"></i>
+        <h3>{{ specialtiesCount }}</h3>
+        <p>Specialties</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section></div>

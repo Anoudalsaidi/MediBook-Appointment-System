@@ -1,0 +1,51 @@
+.doctor-card {
+  transition: transform 0.3s, box-shadow 0.3s; 
+  cursor: pointer; 
+ 
+  margin-bottom: 36px;
+  padding: 20px;
+  border-radius: 12px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  background-color: #ffffff; 
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.doctor-initials {
+    
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+}
+
+.doctor-rating span {
+  color: gold; 
+  font-size: 1rem;
+  margin-right: 2px;
+}
+
+.btn-success {
+  margin-top: 10px;
+}
+.card {
+  border: none;
+  border-radius: 25px;
+  padding: 25px;
+  background: #e9f2ffdd;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}

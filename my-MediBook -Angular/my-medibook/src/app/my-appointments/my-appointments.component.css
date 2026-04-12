@@ -1,0 +1,33 @@
+.underline-title {
+  text-align: center;
+  color: #0d6efd; 
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-decoration: underline;
+  text-decoration-color: #0d6efd; 
+  text-underline-offset: 6px;
+}
+.card {
+  border: none;
+  border-radius: 25px;
+  padding: 25px;
+  background: #e9f2ffdd;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+/* ===== Hover Effect ===== */
+.card:hover
+{
+  transform: translateY(-10px) scale(1.02);
+  background: #0d6efd;
+  color: #ffffff;
+  box-shadow: 0 15px 30px rgba(13,110,253,0.3);
+}
+
+/* Hover Text Fix */
+.card:hover p
+{
+  color: #ffffff;
+}

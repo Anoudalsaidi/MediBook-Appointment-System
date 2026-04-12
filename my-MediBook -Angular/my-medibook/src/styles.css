@@ -1,0 +1,63 @@
+/* ===== NAVBAR ===== */
+body.dark .navbar {
+  background-color: #121212 !important;
+}
+
+body.dark .navbar-toggler {
+  background-color: #ffffff;
+}
+
+body.dark .navbar .nav-link {
+  color: #ffffff !important;
+}
+
+body.dark .navbar .nav-link:hover {
+  color: #0d6efd !important;
+}
+
+body.dark .navbar-brand {
+  color: #ffffff !important;
+}
+
+body.dark .navbar-brand:hover {
+  color: #0d6efd !important;
+}
+body.dark button{
+    background-color: #ffffff;
+    color: #0d6efd !important; 
+}
+/* ===== SECTIONS ===== */
+body.dark .darkmode,
+body.dark .appointmentpage,
+body.dark .Appointmentspage,
+body.dark .contactpage {
+  background-color: #121212ef !important;
+  color: #ffffff;
+}
+
+/* ===== CARDS ===== */
+body.dark .card {
+  background-color: #0f3cd2;
+  color: #ffffff;
+}
+
+/* ===== BUTTONS ===== */
+body.dark .btn {
+  background-color: #62a7e7;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+/* ===== LINKS ===== */
+body.dark a {
+  color: #ffffff;
+}
+
+/* ===== INPUTS ===== */
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background-color: #c0c0c0;
+  color: #ffffff;
+  border: 1px solid #555;
+}

@@ -1,0 +1,57 @@
+<div class="darkmode">
+<div class="container my-5">
+
+  <h2 class="text-center mb-4">Appointment Form</h2>
+
+  <div class="card p-4 mx-auto" style="max-width: 500px;">
+
+    <!-- Doctor Name -->
+   <p *ngIf="doctorName">
+  Doctor: <strong>{{ doctorName }}</strong>
+</p>
+
+<p *ngIf="specialty">
+  Specialty: <strong>{{ specialty }}</strong>
+</p>
+
+    <!-- Patient Name -->
+    <label class="form-label fw-bold">Patient Name</label>
+
+    <input 
+      type="text" 
+      class="form-control"
+      [(ngModel)]="patientName"
+      (input)="onNameChange()"
+      placeholder="Enter your name">
+
+      <!-- Date -->
+<label class="form-label fw-bold mt-3">Select Date</label>
+<input 
+  type="date" 
+  class="form-control"
+  [(ngModel)]="selectedDate"
+  [min]="minDate">
+<!-- Time -->
+<label class="form-label fw-bold mt-3">Select Time</label>
+<select class="form-select" [(ngModel)]="selectedTime">
+  <option value="" disabled>Select time</option>
+  <option>09:00 AM</option>
+  <option>10:00 AM</option>
+  <option>11:00 AM</option>
+  <option>02:00 PM</option>
+  <option>03:00 PM</option>
+</select>
+    <!-- Live Preview -->
+    <p class="mt-3">
+      Booking for: <strong>{{ patientName || '---' }}</strong>
+    </p>
+
+    <!-- Submit Button -->
+    <button 
+  class="btn btn-primary w-100 mt-3"
+  [disabled]="!patientName || !selectedDate || !selectedTime"
+  (click)="submit()">
+  Confirm Appointment
+</button>
+  </div>
+</div></div>

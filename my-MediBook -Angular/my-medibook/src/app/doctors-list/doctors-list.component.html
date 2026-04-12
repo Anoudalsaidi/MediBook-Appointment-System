@@ -1,0 +1,55 @@
+<div class="darkmode">
+<div class="container my-4">
+  <h2 class="underline-title">Our Doctors</h2>
+
+  <!-- Filters -->
+  <div class="row mb-3">
+    
+    <div class="col-md-4">
+      <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Search doctor..."
+        [(ngModel)]="searchTerm"
+        (ngModelChange)="filterDoctors()">
+    </div>
+
+    <div class="col-md-4">
+      <select 
+        class="form-select"
+        [(ngModel)]="specialtyFilter"
+        (ngModelChange)="filterDoctors()">
+
+        <option value="All">All</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="General Medicine">General Medicine</option>
+        <option value="Dermatology">Dermatology</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Dentistry">Dentistry</option>
+
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <select 
+        class="form-select"
+        [(ngModel)]="sortOption"
+        (ngModelChange)="filterDoctors()">
+
+        <option value="Rating">Rating High → Low</option>
+        <option value="Experience">Experience High → Low</option>
+
+      </select>
+    </div>
+
+  </div>
+
+  <!-- Doctors List -->
+  <div class="row">
+    <div class="col-md-4 p-2" *ngFor="let doctor of filteredDoctors">
+      <app-doctor-card [doctor]="doctor"></app-doctor-card>
+    </div>
+  </div>
+
+</div></div>

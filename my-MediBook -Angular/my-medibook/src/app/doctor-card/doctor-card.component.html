@@ -1,0 +1,71 @@
+<div class="darkmode">
+<div class="card doctor-card text-center p-3 mb-3 h-100">
+
+  <!-- Initials -->
+  <div class="doctor-initials">
+    {{ getInitials(doctor.name) }}
+  </div>
+
+  <!-- Name -->
+  <h5>{{ doctor.name }}</h5>
+
+  <!-- Specialty -->
+  <p [ngSwitch]="doctor.specialty">
+
+    <span *ngSwitchCase="'Cardiology'" class="badge bg-danger">Cardiology</span>
+    <span *ngSwitchCase="'Dermatology'" class="badge bg-success">Dermatology</span>
+    <span *ngSwitchCase="'Pediatrics'" class="badge bg-warning">Pediatrics</span>
+    <span *ngSwitchDefault class="badge bg-primary">{{ doctor.specialty }}</span>
+
+  </p>
+
+  <!-- Rating -->
+  <div class="doctor-rating my-2">
+    <span *ngFor="let star of getStars(doctor.rating)" class="text-warning">
+      ★
+    </span>
+  </div>
+
+  <!-- Experience -->
+  <p>{{ doctor.experience }} years experience</p>
+
+  <!-- Available Days-->
+  <p class="mt-2">
+    <strong>Available Days:</strong><br>
+
+    <span 
+      *ngFor="let day of doctor.availableDays" 
+      class="badge bg-light text-dark me-1">
+      {{ day }}
+    </span>
+
+  </p>
+
+  <!-- select day-->
+  <label class="form-label mt-2">Select Day</label>
+
+  <select class="form-select mb-3" [(ngModel)]="selectedDay">
+
+    <option value="" disabled selected>Select day</option>
+
+    <option *ngFor="let day of doctor.availableDays" [value]="day">
+      {{ day }}
+    </option>
+
+  </select>
+
+  <!-- Fully Booked -->
+  <p *ngIf="!isAvailable()" class="text-danger">
+    Fully Booked
+  </p>
+
+ 
+  <button 
+    *ngIf="isAvailable()"
+    (click)="bookAppointment(doctor.id)"
+    [disabled]="!selectedDay"
+    class="btn btn-primary w-100">
+    Book Appointment
+  </button>
+
+</div></div>
