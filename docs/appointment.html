@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment</title>
+  <link rel="icon" href="./Assets/icon.png">
+  <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+<!-- ========= Navbar Section ========== -->
+
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+   <a class="navbar-brand fw-bold text-primary" href="#">✚ MediBook</a>
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#service">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="darkToggle" class="btn btn-outline-dark ms-3">🌙</button>
+    </div>
+  </div>
+</nav>
+<!-- ============================= -->
+
+    <!-- FORM -->
+<div class="appointmentpage">
+<div class="container my-2">
+
+  <h2 class="section-title text-center">Book Appointment</h2>
+
+  <div class="row mt-3 g-4">
+
+
+    <div class="col-lg-8">
+      <div class="card p-4 shadow appointment-card">
+        <form id="appointmentForm">
+
+          <h4 class="mb-3">Patient Details</h4>
+
+          <input type="text" id="name" class="form-control mb-2" placeholder="Full Name">
+          <small class="text-danger" id="nameError"></small>
+
+          <input type="email" id="email" class="form-control mb-2" placeholder="Email">
+          <small class="text-danger" id="emailError"></small>
+
+          <input type="text" id="phone" class="form-control mb-2" placeholder="Phone">
+          <small class="text-danger" id="phoneError"></small>
+
+          <input type="number" id="age" class="form-control mb-2" placeholder="Age">
+          <small class="text-danger" id="ageError"></small>
+
+          <div class="mb-2">
+            <label class="fw-bold">Gender:</label><br>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female" class="ms-3"> Female
+          </div>
+          <small class="text-danger" id="genderError"></small>
+
+          <textarea id="concern" class="form-control mb-2" placeholder="Medical Concern"></textarea>
+          <small class="text-danger" id="concernError"></small>
+
+          <h4 class="mt-4 mb-3">Appointment Details</h4>
+
+          <input type="date" id="date" class="form-control mb-2">
+          <small class="text-danger" id="dateError"></small>
+
+          <select id="time" class="form-control mb-3">
+            <option value="">Select Time</option>
+            <option>09:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>14:00</option>
+            <option>15:00</option>
+            <option>16:00</option>
+          </select>
+          <small class="text-danger" id="timeError"></small>
+
+          <button class="btn btn-primary w-100 mt-3">
+            Confirm Booking
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+    
+    <!-- DOCTOR SUMMARY -->
+<div class="col-lg-4">
+  <div class="card p-4 shadow doctor-summary">
+
+    <h5 class="mb-3">👨‍⚕️ Doctor Info</h5>
+
+    <p><strong>Name:</strong> <span id="doctorName"></span></p>
+    <p><strong>Specialty:</strong> <span id="doctorSpecialty"></span></p>
+    <p><strong>Day:</strong> <span id="doctorDays"></span></p>
+    <p><strong>Fee:</strong> <span id="doctorFee"></span></p>
+
+    <!-- CONFIRMATION BOX  -->
+    <div id="confirmation" class="mt-3"></div>
+
+  </div>
+</div>
+
+
+</div></div>
+<script src="./JS/bootstrap.bundle.min.js"></script>
+<script src="./JS/darkmode.js"></script>
+<script src="./JS/appointment.js"></script>
+</body>
+</html>

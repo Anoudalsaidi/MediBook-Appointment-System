@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MediBook - Doctor Appointment System">
+
+  <title> MediBook Clinic</title>
+  <link rel="icon" href="./Assets/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+
+<!-- ========= Navbar Section ========== -->
+
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+   <a class="navbar-brand fw-bold text-primary" href="#">✚ MediBook</a>
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#service">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="darkToggle" class="btn btn-outline-dark ms-3">🌙</button>
+    </div>
+  </div>
+</nav>
+<!-- ============================= -->
+
+
+ <!-- ========= Hero Section ========== -->
+  
+<section id="home" class="hero text-white text-center">
+  <div class="overlay"></div>
+
+  <div class="container">
+    <h1 class="fw-bold display-4">Your Health, Our Priority</h1>
+    <a href="doctors.html" class="btn btn-primary mt-3">Book Appointment</a>
+  </div>
+</section>
+<!-- ============================= -->
+
+
+ <!-- ========= Services Section ========== -->
+ <div id="service" class="service-sec">
+<section  class="container my-5 text-center">
+  <h2 class="section-title">Our Services</h2>
+    <div class="row mt-4" id="servicesContainer"></div>
+</section></div>
+<!-- ====================================== -->
+
+ <!-- ========= Doctors Section ========== -->
+  <div class="doctor-sec">
+<section id="doctor" class="container my-5 text-center">
+  <h2 class="section-title">Our Doctors</h2>
+   <div class="row mt-4" id="doctorsContainer"></div>
+</section></div>
+<!-- ====================================== -->
+
+ <!-- ========= Clinic Stats Section ========== -->
+   <div class="Stats-sec">
+<section class="container my-5 text-center">
+  <h2 class="section-title mb-4">Clinic Stats</h2>
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-6 col-md-4 mb-4">
+      <div class="stat-card text-center p-4 h-100">
+        <i class="fa-solid fa-user-doctor fa-2x mb-2" ></i>
+        <h3 id="doctorsCount">0</h3>
+        <p>Doctors</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 mb-4">
+      <div class="stat-card text-center p-4 h-100">
+        <i class="fa-solid fa-hospital fa-2x mb-2" ></i>
+        <h3 id="patientsCount">0</h3>
+        <p>Patients Served</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 mb-4">
+      <div class="stat-card text-center p-4 h-100">
+        <i class="fa-solid fa-stethoscope fa-2x mb-2"></i>
+        <h3 id="specialtiesCount">0</h3>
+        <p>Specialties</p>
+      </div>
+    </div>
+  </div>
+</section></div>
+  <!-- ====================================== -->
+
+ <!-- ========= Footer Section ========== -->
+   <div class="footer-sec">
+<footer class="footer">
+  <div class="footer-container">
+ 
+    <div class="footer-section clinic-info">
+      <h3 id="clinic-name">Clinic Name</h3>
+      <p><i class="fas fa-map-marker-alt"></i> <span id="clinic-address">Address</span></p>
+      <p><i class="fa-solid fa-square-phone"></i> <span id="clinic-phone">Phone</span></p>
+      <p><i class="fas fa-envelope"></i> <span id="clinic-email">Email</span></p>
+      <p><i class="fas fa-clock"></i> <span id="clinic-hours">Hours</span></p>
+    </div>
+
+    <!--services-->
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul id="services-list">
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 MediBook Appointment System. All rights reserved.</p>
+  </div>
+</footer></div>
+
+<!-- ========== Fetch Data ============ -->
+
+
+ <script>
+   
+const data = {
+  "clinic_info": {
+    "name": "✚ MediBook Clinic",
+    "address": "45 Al Khuwair Street, Muscat, Oman",
+    "phone": "+968 2455 7890",
+    "email": "appointments@medibook.com",
+    "hours": "Sun–Thu 8:00 AM – 8:00 PM"
+  },
+  "services": [
+    {"name": "Consultation", "icon": "fas fa-user-md"},
+    {"name": "Booking", "icon": "fas fa-calendar-check"},
+    {"name": "Follow-up", "icon": "fas fa-notes-medical"},
+    {"name": "Checkup", "icon": "fas fa-stethoscope"},
+    {"name": "Vaccination", "icon": "fas fa-syringe"},
+    {"name": "Dental Care", "icon": "fas fa-tooth"}
+  ]
+};
+
+// Fetch clinic info
+document.getElementById('clinic-name').textContent = data.clinic_info.name;
+document.getElementById('clinic-address').textContent = data.clinic_info.address;
+document.getElementById('clinic-phone').textContent = `Phone: ${data.clinic_info.phone}`;
+document.getElementById('clinic-email').textContent = `Email: ${data.clinic_info.email}`;
+document.getElementById('clinic-hours').textContent = `Hours: ${data.clinic_info.hours}`;
+
+// Fetch clinic services
+const servicesList = document.getElementById('services-list');
+data.services.forEach(service => {
+  const li = document.createElement('li');
+  li.innerHTML = `<i class="${service.icon}"></i> ${service.name}`;
+  servicesList.appendChild(li);
+});
+</script>
+ 
+
+
+
+
+
+<script src="./JS/bootstrap.bundle.min.js"></script>
+<script src="./JS/darkmode.js"></script>
+<script src="./JS/main.js"></script>
+</body>
+</html>
