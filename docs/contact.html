@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MediBook-Contact</title>
+    <link rel="icon" href="./Assets/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <!-- ========= Navbar Section ========== -->
+
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+   <a class="navbar-brand fw-bold text-primary" href="#">✚ MediBook</a>
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#service">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="darkToggle" class="btn btn-outline-dark ms-3">🌙</button>
+    </div>
+  </div>
+</nav>
+<!-- ============================= -->
+        <div class="contactpage">
+   <section id="contact" class="container my-5">
+  <h2 class="section-title text-center mb-5">Contact Us</h2>
+
+  <div class="row align-items-start g-4">
+
+    <!-- ===== Clinic Info ===== -->
+    <div class="col-lg-5 col-md-12">
+      <div class="contact-info p-4 rounded-3 shadow-sm h-100">
+        <h4 class="mb-4 text-primary">📍 Clinic Information</h4>
+        <p id="contactAddress" class="mb-2 fw-semibold"></p>
+        <p id="contactPhone" class="mb-2 fw-semibold"></p>
+        <p id="contactEmail" class="mb-2 fw-semibold"></p>
+        <p id="contactHours" class="mb-2 fw-semibold"></p>
+      </div>
+    </div>
+
+    <!-- ===== Contact Form ===== -->
+    <div class="col-lg-7 col-md-12">
+      <form id="contactForm" class="contact-form p-4 rounded-3 shadow-sm">
+        <h4 class="mb-4 text-primary">Send Us a Message</h4>
+        <div class="mb-3">
+          <input type="text" id="name" class="form-control form-control-lg" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" id="emailForm" class="form-control form-control-lg" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea id="message" class="form-control form-control-lg" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section></div>
+
+
+
+<script src="./JS/bootstrap.bundle.min.js"></script>
+<script src="./JS/darkmode.js"></script>
+<script src="JS/contact.js"></script>
+</body>
+</html>

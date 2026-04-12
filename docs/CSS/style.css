@@ -1,0 +1,512 @@
+/* ========= Global Style =========== */
+:root {
+  --main-color: #0d6efd;
+  --main-text:white;
+  --Secondery-text:#f8f9fad8;
+  --third-text:#e9f2ffdd;
+  --bg-darkmode:black;
+  --bg-dardsecond:#333;
+  --bg-overlay:rgba(0, 0, 0, 0.626);
+  --bg-second:#d4dff1;
+  --bg-footer:#6610f2;
+  --bg-footer-hover:#520dc2;
+  --bg-footer-section:rgba(0,0,0,0.2);
+  --bg-footer-bottom:rgba(255,255,255,0.5);
+  --bg-Appointmentpage:#e6fff2;
+  --bg-app-color:#28a745;
+  --color-icon:#ffc107;
+  --color-icon-hover:#ffea00;
+  --dr-color:#f8f9fa;
+  --dr-main: #e9ecef;
+  --dr-icon:#007bff;
+  --dr-text:#17a2b8;
+  --dr-days:#555;
+}
+
+
+/* ============ Dark Mode ================ */
+
+body.dark .navbar {
+  background-color: var(--bg-darkmode) !important;
+}
+body.dark .navbar-toggler{
+  color: var(--main-text);
+  background-color: var(--main-text);
+}
+
+body.dark .navbar .nav-link {
+  color:var(--main-text) !important;
+}
+
+body.dark .navbar .nav-link:hover {
+  color: var(--main-color) !important;
+}
+
+body.dark .navbar-brand {
+  color:var(--main-text) !important;
+}
+body.dark .navbar-brand:hover {
+  color: var(--main-color)!important;
+}
+
+body.dark .service-sec,
+body.dark .doctor-sec,
+body.dark .Stats-sec,
+body.dark .footer-sec,
+body.dark .doctor-page,
+body.dark .appointmentpage,
+body.dark .Appointmentspage,
+body.dark .contactpage
+
+ {
+  background-color: var(--bg-darkmode)!important;
+  color: var(--main-color);
+  border: 1px solid var(--bg-dardsecond);
+}
+
+body.dark button,
+body.dark a {
+  background-color:var(--bg-darkmode);
+  color: var(--main-text);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/* ============ End Dark Mode ================ */
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* ============ Home Page Style  ================ */
+
+
+/* ========= Navbar Style ========== */
+
+.navbar{
+
+  padding: 15px;
+  border-radius: 3px;
+}
+.navbar .nav-link {
+
+  font-weight: 500;
+  margin: 0 0.4rem;
+  transition: 0.3s, transform 0.3s; 
+}
+.navbar .nav-link:hover {
+ 
+  transform: scale(1.1); 
+  text-decoration:underline var(--main-color); 
+}
+
+
+/* ==================================== */
+
+
+/* ============ Hero Style ================ */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url('../Assets/bg-hero.png') top center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.hero .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:var(--bg-overlay);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+ 
+}
+/* ============================================ */
+
+/* ============ Services Style ================ */
+/* Tital */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Roboto Slab', serif;
+  color:var(--main-color);
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.section-title::after {
+  content: '';
+  width: 60%;
+  height: 2px;
+  background:var(--main-color);
+  position: absolute;
+  left: 20%;
+  bottom: -10px;
+  border-radius: 5px;
+}
+
+/* Card */
+.service-card {
+  border:none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--Secondery-text), var(--third-text));
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.service-icon {
+  font-size: 3rem;
+}
+
+/* Hover Effect */
+.service-card:hover {
+  background:var(--main-color);
+  color:var(--main-text);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px var(--bg-overlay);
+}
+
+/* ============================================ */
+
+/* ============ Doctors Style ================ */
+/* Tital */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color:var(--main-color);
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+  padding: 8px;
+ 
+}
+
+.section-title::after {
+  content: '';
+  width: 60%;
+  height: 2px;
+  background:var(--main-color);
+  position: absolute;
+  left: 20%;
+  bottom: -10px;
+  border-radius: 5px;
+}
+
+/* Card */
+.doctor-card {
+  border:none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--third-text), var(--bg-second));
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.doctor-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.doctor-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Hover Effect */
+.doctor-card:hover {
+  background:var(--main-color);
+  color:var(--main-text);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px var(--bg-overlay);
+}
+
+/* ============================================ */
+
+/* ============ Clinic Stats Style ================ */
+.stat-card {
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--Secondery-text), var(--third-text));
+  transition: all 0.5s ease;
+  cursor: pointer;
+  padding: 2rem 1rem;
+}
+.stat-card:hover {
+  background: var(--main-color);
+  color: var(--main-text);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px var(--bg-overlay);
+}
+
+.stat-card i {
+    color: var(--color-icon);
+  margin-bottom: 1rem;
+}
+/* ============================================ */
+
+/* ============ Footer Style ================ */
+.footer {
+ 
+  color: var(--main-text);
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif;
+  transition: background 0.3s ease;
+}
+
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+   background: linear-gradient(135deg, var(--main-color), var(--bg-footer));
+}
+
+.footer-section {
+  flex: 1 1 150px;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--bg-footer-section);
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid var(--main-text);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.footer-section ul li i {
+  margin-right: 10px;
+  color: var(--color-icon);
+  transition: transform 0.2s, color 0.2s;
+}
+
+.footer-section ul li:hover i {
+  color: var(--color-icon-hover);
+  transform: scale(1.3);
+}
+
+.footer-section ul li:hover {
+  color: var(--color-icon-hover);
+}
+
+.footer-section p i {
+  margin-right: 8px;
+  color: var(--color-icon);
+  transition: 0.3s;
+}
+
+.footer-section p i:hover {
+  color: var(--color-icon-hover);
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 1px solid var(--bg-footer-bottom);
+  padding-top: 15px;
+  background: linear-gradient(135deg, var(--main-color), var(--bg-footer));
+}
+
+@media(max-width:768px){
+  .footer-container{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-section{
+    margin: 20px 0;
+  }
+}
+/* ============ End Home Page Style  ================ */
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* ============ Doctor Page Style  ================ */
+
+/* Doctor Card */
+.doctor-card {
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--dr-color), var(--dr-main));
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--bg-footer-section);
+}
+
+/* Placeholder Circle */
+.doctor-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color:var(--dr-icon);
+  color: var(--main-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 10px;
+}
+
+/* Specialty Badge */
+.badge-specialty {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 12px;
+  background-color: var(--dr-text);
+  color:var(--main-text);
+  font-size: 0.8rem;
+}
+
+/* Available Days */
+.available-days {
+  font-size: 0.85rem;
+  color: var(--dr-days);
+  margin-top: 8px;
+}
+/* ==================== End Doctor Page Style ======================== */
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* =================== Appointment Page Style ================ */
+
+/* Appointment Card */
+.appointment-card {
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--third-text), var(--bg-second));
+  transition: 0.3s;
+}
+
+.appointment-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Doctor Summary */
+.doctor-summary {
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--bg-second), var(--third-text));
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Button */
+.btn-primary {
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* Confirmation Box */
+.doctor-summary #confirmation .card {
+  border-radius: 12px;
+  background-color:var(--bg-Appointmentpage);
+  border-left: 5px solid var(--bg-app-color) ;
+  box-shadow: 0 3px 10px var(--bg-footer-section);
+}
+
+/* =================== End Appointment Page Style ================ */
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* =================== Appointments Page Style ================ */
+
+.appointment-card {
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--third-text), var(--bg-second));
+  transition: 0.3s;
+}
+
+.appointment-card:hover {
+  transform: translateY(-5px);
+}
+/* =================== End Appointments Page Style ================ */
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* =================== Contact Page Style ================ */
+.contact-info, .contact-form {
+  background: linear-gradient(135deg, var(--third-text), var(--bg-second));
+  color: var(--main-text);
+  transition: all 0.3s ease;
+}
+
+.contact-info h4, .contact-form h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.contact-info p {
+  font-weight: bold;
+  color: var(--dr-text);
+  margin-top: 28px;
+  padding: 18PX;
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+  border-radius: 0.5rem;
+  border: 1px solid var(--third-text);
+  background-color: var(--Secondery-text);
+  color: var(--main-text);
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 5px var(--dr-icon);
+}
+
+/* Button */
+.contact-form button {
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+
+@media (max-width: 991px) {
+  .contact-info, .contact-form {
+    margin-bottom: 1.5rem;
+  }
+}
+/* =================== End Contact Page Style ================ */
